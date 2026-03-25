@@ -12,10 +12,10 @@ public class Main {
         lugares.add(new ParqueExplora());
 
         for (EspacioCultural lugar : lugares) {
-            System.out.println("Lugar: " + lugar.getNombre());
-            System.out.println("Horario: " + lugar.getHorario());
-            System.out.println("Requisito: " + lugar.getRequisito());
-            System.out.println("Actividad: " + lugar.getActividad());
+            System.out.println("Lugar: " + lugar.getClass().getSimpleName()); // nombre de la clase
+            lugar.mostrarHorario();
+            System.out.println("Requisito: " + lugar.obtenerRequisitoEntrada());
+            lugar.realizarActividadPrincipal();
             System.out.println("----------------------------");
         }
     }
